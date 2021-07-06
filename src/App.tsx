@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="d-flex flex-column flex-grow-1">
+      <header>
+        <Navbar bg="light">
+          <Container>
+            <Navbar.Brand href="#home">React Testing Demo</Navbar.Brand>
+          </Container>
+        </Navbar>
       </header>
+      <div className="flex-grow-1">
+        <Container>Main Stuff</Container>
+      </div>
+      <footer>
+        <Container>Footer</Container>
+      </footer>
     </div>
   );
 }
